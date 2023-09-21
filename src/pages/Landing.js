@@ -38,7 +38,7 @@ export default function LandingPage() {
     <PageContent title='¡Bienvenido!'>
       <div>
         <Header />
-        <ul id="concepts">
+        <ul id='concepts'>
           {Array.isArray(concepts) ? (
             concepts.map((concept) => (
               <Concept
@@ -46,15 +46,14 @@ export default function LandingPage() {
                 title={concept.title}
                 image={concept.image}
                 target={concept.target}
+                description={concept.description}
               />
             ))
           ) : (
             <p>No hay conceptos disponibles.</p>
           )}
-
         </ul>
       </div>
     </PageContent>
-
   );
 }
